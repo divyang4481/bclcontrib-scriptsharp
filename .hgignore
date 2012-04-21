@@ -1,0 +1,11 @@
+relre:^TestResults/.*
+glob:*.suo
+glob:*.user
+glob:*/bin/*
+glob:*/obj/*
+glob:*/Bin/*
+glob:Bin/*
+glob:_ReSharper.*/*
+glob:*/_ReSharper.*/*
+glob:*.sdf
+glob:*/ipch/*

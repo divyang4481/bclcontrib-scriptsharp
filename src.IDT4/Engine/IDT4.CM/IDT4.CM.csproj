@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BE44A6E6-8960-43CB-A7F7-0AA39201D356}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IDT3</RootNamespace>
+    <AssemblyName>IDT3</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Engine\CM+Model\BrushRef.cs" />
+    <Compile Include="Engine\CM+Model\BrushRefBlock.cs" />
+    <Compile Include="Engine\CM+Detection\TrmVertex.cs" />
+    <Compile Include="Engine\CM+Detection\TrmEdge.cs" />
+    <Compile Include="Engine\CM+Detection\TrmPolygon.cs" />
+    <Compile Include="Engine\CM+Detection\TraceWork.cs" />
+    <Compile Include="Engine\CM+Model\Model.cs" />
+    <Compile Include="Engine\CM+Model\Node.cs" />
+    <Compile Include="Engine\CM+Model\NodeBlock.cs" />
+    <Compile Include="Engine\CM+Model\Vertex.cs" />
+    <Compile Include="Engine\CM+Model\Edge.cs" />
+    <Compile Include="Engine\CM+Model\PolygonBlock.cs" />
+    <Compile Include="Engine\CM+Model\Polygon.cs" />
+    <Compile Include="Engine\CM+Model\PolygonRef.cs" />
+    <Compile Include="Engine\CM+Model\PolygonRefBlock.cs" />
+    <Compile Include="Engine\CM+Model\BrushBlock.cs" />
+    <Compile Include="Engine\CM+Model\Brush.cs" />
+    <Compile Include="Engine\CM\ContactInfo.cs" />
+    <Compile Include="Engine\CM\CmHandle.cs" />
+    <Compile Include="Engine\CM\ProcNode.cs" />
+    <Compile Include="Engine\CM\WindingList.cs" />
+    <Compile Include="Engine\CM\CM.cs" />
+    <Compile Include="Engine\CM\CollisionModelManager.cs" />
+    <Compile Include="Engine\CM\Trace.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Engine\CM\CollisionModelManager+Contacts.cs" />
+    <Compile Include="Engine\CM\CollisionModelManager+Contents.cs" />
+    <Compile Include="Engine\CM\CollisionModelManager+Debug.cs" />
+    <Compile Include="Engine\CM\CollisionModelManager+Files.cs" />
+    <Compile Include="Engine\CM\CollisionModelManager+Load.cs" />
+    <Compile Include="Engine\CM\CollisionModelManager+Rotate.cs" />
+    <Compile Include="Engine\CM\CollisionModelManager+Trace.cs" />
+    <Compile Include="Engine\CM\CollisionModelManager+Translate.cs" />
+    <Compile Include="Engine\CM\ContactType.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\IDT4.Core\IDT4.Core.csproj">
+      <Project>{CFDC8ECA-CA0A-4CBB-8F04-119A0FB5EA83}</Project>
+      <Name>IDT4.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

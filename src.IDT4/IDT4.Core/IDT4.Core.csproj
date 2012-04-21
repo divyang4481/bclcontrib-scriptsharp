@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CFDC8ECA-CA0A-4CBB-8F04-119A0FB5EA83}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IDT4.Core</RootNamespace>
+    <AssemblyName>IDT3.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Lib.cs" />
+    <Compile Include="Math\Complex.cs" />
+    <Compile Include="Math\Angles.cs" />
+    <Compile Include="Math\CQuat.cs" />
+    <Compile Include="Math\Quat.cs" />
+    <Compile Include="Math\Curve.cs" />
+    <Compile Include="Math\SIMDProcessor.cs" />
+    <Compile Include="Math\Lcp+Symmetric.cs" />
+    <Compile Include="Math\Lcp+Square.cs" />
+    <Compile Include="Math\Lcp.cs" />
+    <Compile Include="Math\MatX.cs" />
+    <Compile Include="Math\Mat6.cs" />
+    <Compile Include="Math\Mat5.cs" />
+    <Compile Include="Math\Mat4.cs" />
+    <Compile Include="Math\Mat3.cs" />
+    <Compile Include="Math\Mat2.cs" />
+    <Compile Include="Math\Rotation.cs" />
+    <Compile Include="Math\Polar3.cs" />
+    <Compile Include="Math\VecX.cs" />
+    <Compile Include="Math\Vec5.cs" />
+    <Compile Include="Math\Vec4.cs" />
+    <Compile Include="Math\Vec6.cs" />
+    <Compile Include="Math\Vec2.cs" />
+    <Compile Include="QHandle.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Master.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="arc\" />
+    <Folder Include="BoundingVolumes\" />
+    <Folder Include="Geometry\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Math\Vec3.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
